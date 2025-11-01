@@ -24,7 +24,7 @@ void Update(AlxWindow* w){
 
     Clear(BLACK);
 
-    StdFont_Render_CStr(WINDOW_STD_ARGS,&stdfont,0.0f,0.0f);
+    StdFont_Render_CStr(WINDOW_STD_ARGS,&stdfont,"Hello World",0.0f,0.0f,WHITE);
 }
 void Delete(AlxWindow* w){
     StdFont_Free(&stdfont);
