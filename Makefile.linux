@@ -26,7 +26,8 @@ debug:
 	gdb ./$(TARGET)
 
 exe:
-	./$(TARGET)
+	./$(TARGET) ./data/ComicShannsMonoNerdFont-Bold.otf U+0041
+
 
 clean:
 	rm -rf $(BUILD_DIR)/*
