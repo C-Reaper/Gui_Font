@@ -196,6 +196,7 @@ static HeadTable parse_head(const u8 *ptr, u32 len) {
 typedef struct {
     u16 numGlyphs;
 } MaxpTable;
+
 static MaxpTable parse_maxp(const u8 *ptr, u32 len) {
     MaxpTable m = {0};
     if (len < 6) return m;
