@@ -200,7 +200,7 @@ void parse_simple_glyph_points(u8* glyphData, GlyphData* g, Point** ppoints) {
             if (flag & 0x10) x += glyphData[ptr++];
             else             x -= glyphData[ptr++];
         } else if (!(flag & 0x10)) {               // long delta
-            x += READ_BE16(glyphData + ptr);
+            x += (i16)READ_BE16(glyphData + ptr);
             ptr += 2;
         }
         points[i].x = x;
@@ -214,7 +214,7 @@ void parse_simple_glyph_points(u8* glyphData, GlyphData* g, Point** ppoints) {
             if (flag & 0x20) y += glyphData[ptr++];
             else             y -= glyphData[ptr++];
         } else if (!(flag & 0x20)) {
-            y += READ_BE16(glyphData + ptr);
+            y += (i16)READ_BE16(glyphData + ptr);
             ptr += 2;
         }
         points[i].y = y;
